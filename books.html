@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكتب - مكتبتنا</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>مكتبة النور</h1>
+            <nav>
+                <ul class="nav-list" style="direction: rtl;">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المكتبة</a></li>
+                    <li><a href="books.html">الكتب</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="books-list">
+            <h2>قائمة الكتب</h2>
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th>صورة الكتاب</th>
+                        <th>الكود</th>
+                        <th>ISBN</th>
+                        <th>العنوان</th>
+                        <th>السعر</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="img/717993.jpg" alt="كتاب 1"></td>
+                        <td>01</td>
+                        <td>1234567890123</td>
+                        <td>مفكرة السعادة </td>
+                        <td>3$</td>
+                        <td><button class="choose-book" data-title="مفكرة السعادة " data-price="$3">اختيار</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/346573.jpg" alt="دفاتر الوراق"></td>
+                        <td>02</td>
+                        <td>9876543210987</td>
+                        <td>دفاتر الوراق</td>
+                        <td>8$</td>
+                        <td><button class="choose-book" data-title="دفاتر الوراق" data-price="$8">اختيار</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/358327.jpg" alt="الوقوف على ساق واحدة"></td>
+                        <td>03</td>
+                        <td>5678901234567</td>
+                        <td> الوقوف على ساق واحدة</td>
+                        <td>6$</td>
+                        <td><button class="choose-book" data-title="الوقوف على ساق واحدة"
+                                data-price="$6">اختيار</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section class="order-section hidden">
+            <h2>طلب كتاب</h2>
+            <form id="order-form">
+                <p><strong>الكتاب المختار:</strong> <span id="selected-book"></span></p>
+                <label for="full-name">الاسم الكامل:</label>
+                <input type="text" id="full-name" pattern="[\u0621-\u064A ]*" placeholder="الاسم (اختياري)">
+
+                <label for="national-id">الرقم الوطني: </label>
+                <input type="text" id="national-id" required pattern="\d{11}" placeholder="الرقم الوطني (إلزامي)">
+
+                <label for="birth-date">تاريخ الميلاد:</label>
+                <input type="date" id="birth-date">
+
+                <label for="phone">رقم الموبايل:</label>
+                <input type="tel" id="phone" pattern="(09|08)[0-9]{8}" placeholder="رقم الموبايل (اختياري)">
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" placeholder="البريد الإلكتروني (اختياري)">
+
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 مكتبة النور. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+
+</html>
