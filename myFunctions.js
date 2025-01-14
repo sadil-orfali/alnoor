@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // التعامل مع زر عرض التفاصيل
+    document.querySelectorAll(".details-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            const detailsRow = button.closest("tr").nextElementSibling;  // الحصول على الصف التالي (التفاصيل)
+            
+            // التبديل بين إظهار وإخفاء التفاصيل
+            detailsRow.classList.toggle("hidden");
+            button.textContent = detailsRow.classList.contains("hidden") ? "عرض التفاصيل" : "إخفاء التفاصيل";
+        });
+    });
+
     // التحقق من الإدخالات عند إرسال النموذج
     form.addEventListener("submit", e => {
         e.preventDefault();
