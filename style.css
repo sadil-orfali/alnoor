@@ -1,4 +1,3 @@
-/* تنسيق عام */
 body {
     font-family: "Arial", sans-serif;
     margin: 0;
@@ -45,7 +44,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* تنسيق الجدول */
+
 .books-list {
     margin: 20px auto;
     width: 90%;
@@ -165,7 +164,7 @@ form button:hover {
     background-color: #005599;
 }
 
-/* الفوتر */
+ 
 footer {
     background-color: #003366;
     color: white;
@@ -179,3 +178,12 @@ footer p {
     font-size: 1rem;
 }
  
+.details-row.hidden {
+    display: none;
+}
+
+.details-btn{
+    background-color: #003366;
+    color: white
+
+}
